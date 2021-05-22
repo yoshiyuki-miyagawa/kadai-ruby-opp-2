@@ -4,19 +4,20 @@ class Menter
     
     def initialize(name)
         self.name = name
-    
+        
     end
     
-    def job(job)
-        puts "#{self.name}です。私は#{job}"
+    def job
+        p "#{self.name}です。私は現役のITプロフェッショナルです。"
+        
     end
 end
 
-# 継承
+# # 継承
 class RailsMenter < Menter
     
-    def job(job)
-        super
+    def job
+        p "#{self.name}です。私はRubyとRailsでWebアプリケーションを作ります。"
     end
     
 end
@@ -24,6 +25,6 @@ end
     
 
 menter = Menter.new("煌木")
-menter.job("現役のITプロフェッショナルです。")
+menter.job
 railsmenter = RailsMenter.new("赤出")
-railsmenter.job("RubyとRailsでWebアプリケーションを作ります。")
+railsmenter.job
