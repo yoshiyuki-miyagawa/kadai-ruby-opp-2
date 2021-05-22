@@ -1,28 +1,29 @@
 class Menter 
     
-    attr_accessor :name, :job
+    attr_accessor :name
     
-    def initialize(name, job)
+    def initialize(name)
         self.name = name
-        self.job = job
+    
     end
     
-    def menter_job
-        puts "#{self.name}です。私は#{self.job}"
+    def job(job)
+        puts "#{self.name}です。私は#{job}"
     end
 end
 
 # 継承
 class RailsMenter < Menter
     
-    def initialize
-        super("赤出", "RubyとRailsでWebアプリケーションを作ります。")
+    def job(job)
+        super
     end
+    
 end
 
     
 
-menter = Menter.new("煌木", "現役のITプロフェッショナルです。")
-menter.menter_job
-raillsmenter = RailsMenter.new
-raillsmenter.menter_job
+menter = Menter.new("煌木")
+menter.job("現役のITプロフェッショナルです。")
+railsmenter = RailsMenter.new("赤出")
+railsmenter.job("RubyとRailsでWebアプリケーションを作ります。")
