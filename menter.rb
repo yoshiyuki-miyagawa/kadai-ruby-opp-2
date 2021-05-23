@@ -8,7 +8,7 @@ class Menter
     end
     
     def job
-        p "#{self.name}です。私は現役のITプロフェッショナルです。"
+        puts "#{self.name}です。私は現役のITプロフェッショナルです。"
         
     end
 end
@@ -17,7 +17,7 @@ end
 class RailsMenter < Menter
     
     def job
-        p "#{self.name}です。私はRubyとRailsでWebアプリケーションを作ります。"
+        puts "#{self.name}です。私はRubyとRailsでWebアプリケーションを作ります。"
     end
     
 end
@@ -28,3 +28,4 @@ menter = Menter.new("煌木")
 menter.job
 railsmenter = RailsMenter.new("赤出")
 railsmenter.job
+
